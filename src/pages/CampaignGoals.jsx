@@ -21,13 +21,13 @@ const navigate=useNavigate()
         <motion.div variants={textVariant()} className='mt-20'>
         <p>2 of 4</p>
         <h2 className={styles.sectionHeadText}>How much would you like to raise?</h2>
-        <motion.p variants={fadeIn("","",.1,1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+        <motion.p variants={fadeIn("right", "spring", 0.5*1, 0.75)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
             It's completely expected to need funds beyond your starting goal. You can always change your goal as you go.
         </motion.p>
         </motion.div>
       </div>
         <div className="w-full flex flex-wrap gap-10 bg-black-100 rounded-bl-[70px] rounded-tl-[70px]">
-          <div className='w-full h-full px-10 h-full mt-20'>
+          <div className='w-full px-10 mt-20'>
           <motion.div variants={textVariant()} className='flex flex-col items-center mt-20'>
             <h2 className='text-white font-black md:text-[40px] sm:text-[20px] xs:text-[10px] text-[20px]'>Set your starting goal</h2>
             {/* <input id="default-range" type="range" value="0" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"></input> */}
@@ -43,10 +43,10 @@ const navigate=useNavigate()
             <hr className='border-t-2 border-gray-500' />
           </motion.div>
             <div className='flex justify-between py-[20px] items-center mt-[20px]'>
-                <i class="fa-sharp fa-solid fa-arrow-left fa-2xl cursor-pointer" onClick={() => window.history.back()}></i>
+                <i class="fa-sharp fa-solid fa-arrow-left fa-2xl cursor-pointer" onClick={() => navigate(-2)}></i>
                <div onClick={(e) => {
                     navigate('/create/fundraiser/media');
-                }}><Button/></div>
+                }}><Button title='Continue'/></div>
             </div>
           </div>  
         </div>

@@ -22,7 +22,7 @@ const CampaignTypes = () => {
         </motion.div>
       </div>
         <div className="w-full flex flex-wrap gap-10 bg-black-100 rounded-bl-[70px] rounded-tl-[70px]">
-          <div className='w-full h-full px-10 h-full mt-20'>
+          <div className='w-full px-10 mt-20'>
           <motion.div variants={textVariant()} className='mt-20'>
             <h2 className='text-white font-black md:text-[20px] sm:text-[20px] xs:text-[10px] text-[20px]'>Who are you fundraising for ?</h2>
                 <div
@@ -60,7 +60,7 @@ const CampaignTypes = () => {
             <div className='flex justify-between py-[20px] items-center mt-[20px]'>
                 <i class="fa-sharp fa-solid fa-arrow-left fa-2xl cursor-pointer" onClick={() => navigate(-1)}></i>
                 <div onClick={()=> navigate('/create/fundraiser/goal')}>              
-                    <Button/>              
+                    <Button title='Continue'/>             
                 </div>
             </div>
           </motion.div>

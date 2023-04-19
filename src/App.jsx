@@ -11,6 +11,8 @@ import CreateCampaign from "./pages/CreateCampaign";
 import CampaignTypes from "./pages/CampaignTypes";
 import CampaignGoals from "./pages/CampaignGoals";
 import CampaignMedia from "./pages/CampaignMedia";
+import CampaignStory from "./pages/CampaignStory";
+import CampaignDetails from "./pages/CampaignDetails";
 const LandingPage=()=>{
   return (
     <div className="relative z-0 bg-primary">
@@ -30,10 +32,12 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/campaigns" element={<Campaigns/>}/>
+        <Route path="/campaigns/:id" element={<CampaignDetails/>}/>
         <Route path="/create/fundraiser" element={<CreateCampaign/>}/>
         <Route path="/create/fundraiser/media" element={<CampaignMedia/>}/>
         <Route path="/create/fundraiser/types" element={<CampaignTypes/>}/>
         <Route path="/create/fundraiser/goal" element={<CampaignGoals/>}/>
+        <Route path="/create/fundraiser/story" element={<CampaignStory/>}/>
       {/* <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />

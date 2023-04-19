@@ -95,7 +95,7 @@ const CreateCampaign = () => {
                 <span className='text-white font-medium mb-4'>Zip code</span>
                 <input
                   type='text'
-                  name='name'
+                  name='zipcode'
                   value={form.zipcode}
                   onChange={handleChange}
                   placeholder="What's your Zipcode ?"
@@ -111,7 +111,7 @@ const CreateCampaign = () => {
               </div>
               <hr className='border-t-2 border-gray-500' />
               <button className=''>
-                <Button/>
+                <Button title='Continue'/>
               </button>
             </form>
           </motion.div>

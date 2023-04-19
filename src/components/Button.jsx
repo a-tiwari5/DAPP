@@ -4,7 +4,8 @@ import {fadeIn} from "../utils/motion"
 import Tilt from "react-tilt"
 import { useNavigate } from 'react-router-dom'
 
-const Button = () => {
+const Button = ({ title }) => {
+  console.log(title)
 const navigate=useNavigate()
   return (
     <Tilt className={`xs:w-[200px] w-full cursor-pointer z-10 mx-2`}>
@@ -23,7 +24,7 @@ const navigate=useNavigate()
             navigate('/create/fundraiser/types')
           }}
         >
-          <h3 className='text-white text-[20px] font-bold text-center'>Continue</h3>
+          <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
         </div>
       </motion.div>
     </Tilt>
