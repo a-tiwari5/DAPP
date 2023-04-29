@@ -7,7 +7,6 @@ import {fadeIn, textVariant} from "../utils/motion"
 import { SectionWrapper } from '../hoc'
 
 const ServiceCard=({index, title, icon})=>{
-  console.log(title)
   return (
     <Tilt className="xs:w-[330px] w-full cursor-pointer">
       <motion.div

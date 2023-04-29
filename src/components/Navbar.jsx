@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import {logo,menu, close } from "../assets";
@@ -8,10 +8,10 @@ import {logo,menu, close } from "../assets";
 const Navbar = () => {
   const [active, setactive] = useState("");
   const [toggle, settoggle] = useState(false);
+  const navigate=useNavigate()
   const location=useLocation()
 
   useEffect(() => {
-    console.log(location)
   },[location])
   return (
     <nav
@@ -37,9 +37,18 @@ const Navbar = () => {
               key={Link.id}
               className={`${
                 active === Link.title ? "text-white" : "text-secondary"
-              } hover:text-white text[18px] font-medium cursor-pointer`}
+                } hover:text-white text[18px] font-medium cursor-pointer`}
+              onClick={() => {
+                if(Link.id === 'campaigns')
+                {
+                  navigate('/campaigns')
+                }
+              }}
             >
-              <a href={`#${Link.id}`}>{Link.title}</a>
+              {Link.id !== 'campaigns' ?
+                <a href={`#${Link.id}`}>{Link.title}</a> :
+                <span>{ Link.title}</span>
+              }
             </li>
           ))}
         </ul>

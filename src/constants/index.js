@@ -4,14 +4,6 @@
       title: "About",
     },
     {
-      id: "work",
-      title: "Work",
-    },
-    {
-      id: "contact",
-      title: "Contact",
-    },
-    {
       id: "campaigns",
       title: "Campaigns",
     },

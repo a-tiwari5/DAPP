@@ -9,9 +9,9 @@ const SectionWrapper = (Component, idName) => function HOC(){
             viewport={{once:true, amount:.25}}
             className={idName !== "hero" && window.location.pathname === '/' ? `${styles.padding} max-w-7xl mx-auto relative z-0` : ""}
         >   
-            {/* {window.location.pathname === '/' && <span className='hash-span' id={idName}>
+            {window.location.pathname === '/' && <span className='hash-span' id={idName}>
                 &nbsp;
-            </span>} */}
+            </span>}
             <Component/>
         </motion.section>
     )
